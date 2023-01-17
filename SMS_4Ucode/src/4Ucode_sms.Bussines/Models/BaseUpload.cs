@@ -10,7 +10,6 @@ namespace _4Ucode_sms.Bussines.Models
     {
         public Guid Id { get; set; }
         public string FileName { get; set; }
-
         public byte[] Dados { get; set; }
         public string ContentType { get; set; }
     }

@@ -1,3 +1,5 @@
+using _4Ucode_sms.Api.Configuration;
+using _4Ucode_sms.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -32,7 +34,13 @@ builder.Services.AddCors();
 
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.ResolveDependencies();
 
+builder.Services.AddDbContext<MeuDbContext>(options =>
+{
+    options.UseMySql("server=127.0.0.1;initial catalog = DBsms;uid=root;pwd=Root",
+    Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.0-mysql")).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+});
 
 var app = builder.Build();
 
@@ -46,6 +54,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+
 
 app.UseAuthorization();
 

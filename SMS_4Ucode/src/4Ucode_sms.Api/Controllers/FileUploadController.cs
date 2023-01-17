@@ -43,9 +43,9 @@ namespace _4Ucode_sms.Api.Controllers
 
                 await _baseUploadService.Upload(arq);
 
-                return CustomResponse(arq);
-
             }
+
+            return CustomResponse();
         }
     }
 }

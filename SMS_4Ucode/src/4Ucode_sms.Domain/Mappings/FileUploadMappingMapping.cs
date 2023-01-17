@@ -21,7 +21,7 @@ namespace DevIO.Data.Mappings
 
             builder.Property(p => p.Dados)
                 .IsRequired()
-                .HasColumnType("varchar(50)");
+                .HasColumnType("binary(0)");
 
 
             builder.ToTable("Document");
