@@ -1,10 +1,9 @@
-﻿
-using _4Ucode_sms.Bussines.Interfaces;
-using _4Ucode_sms.Bussines.Notificacoes;
+﻿using _4Ucode_sms.Bussines.Notificacoes;
 using _4Ucode_sms.Bussines.Services;
 using _4Ucode_sms.Data.Context;
-using _4Ucode_sms.Data.Repository;
 using Business.Interfaces;
+using Bussines.Interfaces;
+using Data.Repository;
 
 //using Data.Context;
 //using Data.Repository;
@@ -17,8 +16,14 @@ namespace _4Ucode_sms.Api.Configuration
         {
             services.AddScoped<MeuDbContext>();
 
-            services.AddScoped<IBaseUploadRepository, BaseUploadRepository>();
-            services.AddScoped<IBaseUploadService, BaseUploadService>();
+            services.AddScoped<IContatoDocumentoRepository, ContatoDocumentoRepository>();
+            services.AddScoped<IContatoDocumentoService, ContatoDocumentoService>();
+
+            services.AddScoped<IEnvioDocumentoRepository, EnvioDocumentoRepository>();
+            services.AddScoped<IEnvioDocumentoService, EnvioDocumentoService>();
+
+
+
             services.AddScoped<INotificador, Notificador>();
 
             //services.AddScoped<IContaJuridicaRepository, ContaJuridicaRepository>();

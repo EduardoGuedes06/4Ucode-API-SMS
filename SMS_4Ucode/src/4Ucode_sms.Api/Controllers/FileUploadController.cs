@@ -1,51 +1,63 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
-using _4Ucode_sms.Bussines.Interfaces;
 using Business.Interfaces;
-using _4Ucode_sms.Bussines.Models;
+using Bussines.Interfaces;
+using _4Ucode_sms.Api.VewModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace _4Ucode_sms.Api.Controllers
 {
     [Route("api/Arquivo")]
-    [ApiController]
-    public class FileUploadController : BaseController
+    //[ApiController]
+    public class FileUploadController : MainController
     {
-        private readonly IBaseUploadService _baseUploadService;
+        private readonly IContatoDocumentoService _contaDocumentoService;
         private readonly IMapper _mapper;
 
 
         public FileUploadController(
             INotificador notificador,
             IMapper mapper,
-            IBaseUploadService baseUploadService) : base(notificador)
+            IContatoDocumentoService baseUploadService) : base(notificador)
         {
-            _baseUploadService = baseUploadService;
+            _contaDocumentoService = baseUploadService;
             _mapper = mapper;
         }
 
         [HttpPost("Upload")]
-        public async Task<IActionResult> Documents(IList<IFormFile> arquivos)
+        public async Task<IActionResult> Documents(IList<IFormFile> arquivo)
         {
-            IFormFile arquivo = arquivos.FirstOrDefault();
 
 
-            if (arquivo != null)
+            var size = arquivo.Sum(f => f.Length);
+            var filePaths = new List<string>();
+
+            foreach (var item in arquivo)
             {
-                MemoryStream ms = new MemoryStream();
-                arquivo.OpenReadStream().CopyTo(ms);
-
-                UploadDocument arq = new UploadDocument()
+                if (item.Length > 0)
                 {
-                    FileName = arquivo.FileName,
-                    Dados = ms.ToArray(),
-                    ContentType = arquivo.ContentType
-                };
 
-                await _baseUploadService.Upload(arq);
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Save_Backup" + item.FileName);
+                    filePaths.Add(filePath);
 
+                    using var stream = new FileStream(filePath, FileMode.Create);
+
+
+                    await item.CopyToAsync(stream);
+
+
+                }
             }
 
-            return CustomResponse();
+
+
+
+
+            /
+
+            
+
+            return CostumResponse();
         }
     }
 }

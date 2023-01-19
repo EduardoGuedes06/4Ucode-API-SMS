@@ -1,4 +1,4 @@
-﻿using _4Ucode_sms.Bussines.Models;
+﻿using Business.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace _4Ucode_sms.Data.Context
@@ -11,7 +11,9 @@ namespace _4Ucode_sms.Data.Context
             ChangeTracker.AutoDetectChangesEnabled = false;
         }
 
-        public DbSet<UploadDocument> Document { get; set; }
+        public DbSet<ContatoDocumento> tb_Contatos { get; set; }
+
+        public DbSet<EnvioDocumento> tb_Envio { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

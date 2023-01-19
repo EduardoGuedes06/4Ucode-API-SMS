@@ -1,18 +1,18 @@
-﻿using _4Ucode_sms.Bussines.Interfaces;
-using _4Ucode_sms.Bussines.Models;
-using _4Ucode_sms.Data.Repository;
-using AutoMapper;
+﻿using AutoMapper;
 using Business.Interfaces;
+using Business.Models;
 using Business.Services;
+using Bussines.Interfaces;
+using Data.Repository;
 
 namespace _4Ucode_sms.Bussines.Services
 {
-    public class BaseUploadService : BaseService, IBaseUploadService
+    public class ContatoDocumentoService : BaseService, IContatoDocumentoService
     {
         private readonly IMapper _mapper;
-        private readonly IBaseUploadRepository _baseUploadRepository;
+        private readonly IContatoDocumentoRepository _baseUploadRepository;
 
-        public BaseUploadService(IBaseUploadRepository documento,INotificador notificador, IMapper mapper) : base(notificador)
+        public ContatoDocumentoService(IContatoDocumentoRepository documento,INotificador notificador, IMapper mapper) : base(notificador)
         {
             _mapper = mapper;
             _baseUploadRepository = documento;  
@@ -23,9 +23,11 @@ namespace _4Ucode_sms.Bussines.Services
             throw new NotImplementedException();
         }
 
-        public async Task Upload(UploadDocument documento)
+        public async Task Adicionar(ContatoDocumento documento)
         {
             await _baseUploadRepository.Adicionar(documento);
         }
+
+
     }
 }

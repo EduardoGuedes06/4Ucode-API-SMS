@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Business.Models
 {
     public abstract class Entity
@@ -11,12 +6,11 @@ namespace Business.Models
         protected Entity()
         {
             Id = Guid.NewGuid();
-            DataCriacao = DateTime.Now;
+            DataCadastro = DateTime.Now;
 
         }
 
         public Guid Id { get; set; }
-        //public string UsuarioLogin = "Usuario";
-        public DateTime DataCriacao { get; set; }
+        public DateTime DataCadastro { get; set; }
     }
 }

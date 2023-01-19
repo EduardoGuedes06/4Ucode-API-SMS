@@ -1,5 +1,4 @@
-﻿using _4Ucode_sms.Api.Controllers;
-using _4Ucode_sms.Bussines.Models;
+﻿using _4Ucode_sms.Api.VewModel;
 using AutoMapper;
 using Business.Models;
 
@@ -9,8 +8,8 @@ namespace _4Ucode_sms.Api.Configuration
     {
         public AutoMapperConfig()
         {
-            CreateMap<UploadDocumentViewModel, UploadDocument>().ReverseMap();
-
+            CreateMap<ContatoDocumentoViewModel, ContatoDocumento>().ReverseMap();
+            CreateMap<EnvioDocumentoViewModel, EnvioDocumento>().ReverseMap();
 
         }
     }

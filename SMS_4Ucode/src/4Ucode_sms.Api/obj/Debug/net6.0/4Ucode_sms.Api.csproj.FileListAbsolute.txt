@@ -3,6 +3,7 @@ C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debu
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.AssemblyInfoInputs.cache
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.AssemblyInfo.cs
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.csproj.CoreCompileInputs.cache
+C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\appsettings.Development.json
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\appsettings.json
@@ -79,4 +80,3 @@ C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debu
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.pdb
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.genruntimeconfig.cache
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\ref\4Ucode_sms.Api.dll
-C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.MvcApplicationPartsAssemblyInfo.cs
