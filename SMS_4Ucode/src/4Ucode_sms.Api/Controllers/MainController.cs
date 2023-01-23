@@ -1,10 +1,8 @@
 ﻿using _4Ucode_sms.Bussines.Notificacoes;
+using Business.Intefaces;
 using Business.Interfaces;
-using Business.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace _4Ucode_sms.Api.Controllers
 {
@@ -12,13 +10,22 @@ namespace _4Ucode_sms.Api.Controllers
     public class MainController : ControllerBase
     {
         private readonly INotificador _notificador;
+        public readonly IUser AppUser;
 
         protected Guid UsuarioId { get; set; }
         protected bool UsuarioAutenticado { get; set; }
 
-        protected MainController(INotificador notificador)
+        protected MainController(INotificador notificador,
+                                    IUser appUser)
         {
             _notificador = notificador;
+            AppUser = appUser;
+
+            if (appUser.IsAuthenticated())
+            {
+                UsuarioId = appUser.GetUserId();
+                UsuarioAutenticado = true;
+            }
         }
 
         protected bool OperacaoValida()
@@ -26,7 +33,7 @@ namespace _4Ucode_sms.Api.Controllers
             return !_notificador.HasNotifications();
         }
 
-        protected ActionResult CostumResponse(object result = null)
+        protected ActionResult CustomResponse(object result = null)
         {
             if (OperacaoValida())
             {
@@ -44,10 +51,10 @@ namespace _4Ucode_sms.Api.Controllers
             });
         }
 
-        protected ActionResult CostumResponse(ModelStateDictionary modelState)
+        protected ActionResult CustomResponse(ModelStateDictionary modelState)
         {
             if (!modelState.IsValid) NotificarErroModelInvalida(modelState);
-            return CostumResponse();
+            return CustomResponse();
         }
 
         protected void NotificarErroModelInvalida(ModelStateDictionary modelState)

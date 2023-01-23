@@ -11,8 +11,8 @@ using _4Ucode_sms.Data.Context;
 namespace _4Ucode_sms.Domain.Migrations
 {
     [DbContext(typeof(MeuDbContext))]
-    [Migration("20230119175049_initial1")]
-    partial class initial1
+    [Migration("20230120142429_Initial_31")]
+    partial class Initial_31
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

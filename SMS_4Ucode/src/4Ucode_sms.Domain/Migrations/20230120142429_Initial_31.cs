@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace _4Ucode_sms.Domain.Migrations
 {
-    public partial class initial1 : Migration
+    public partial class Initial_31 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

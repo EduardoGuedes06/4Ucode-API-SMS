@@ -1,12 +1,12 @@
-﻿using _4Ucode_sms.Bussines.Notificacoes;
+﻿
+using _4Ucode_sms.Api.Extensions;
+using _4Ucode_sms.Bussines.Notificacoes;
 using _4Ucode_sms.Bussines.Services;
 using _4Ucode_sms.Data.Context;
+using Business.Intefaces;
 using Business.Interfaces;
 using Bussines.Interfaces;
 using Data.Repository;
-
-//using Data.Context;
-//using Data.Repository;
 
 namespace _4Ucode_sms.Api.Configuration
 {
@@ -22,14 +22,12 @@ namespace _4Ucode_sms.Api.Configuration
             services.AddScoped<IEnvioDocumentoRepository, EnvioDocumentoRepository>();
             services.AddScoped<IEnvioDocumentoService, EnvioDocumentoService>();
 
-
-
             services.AddScoped<INotificador, Notificador>();
 
-            //services.AddScoped<IContaJuridicaRepository, ContaJuridicaRepository>();
-            //services.AddScoped<IContaJuridicaService, ContaJuridicaService>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
-            //services.AddScoped<INotificador, Notificador>();
+            services.AddScoped<IUser, AspNetUser>();
+
             return services;
         }
     }

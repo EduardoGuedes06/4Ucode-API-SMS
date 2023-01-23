@@ -4,6 +4,9 @@ using Business.Models;
 using Business.Services;
 using Bussines.Interfaces;
 using Data.Repository;
+using System.Collections;
+using System.IO;
+using System.Text.RegularExpressions;
 
 namespace _4Ucode_sms.Bussines.Services
 {
@@ -25,9 +28,55 @@ namespace _4Ucode_sms.Bussines.Services
 
         public async Task Adicionar(ContatoDocumento documento)
         {
+
             await _baseUploadRepository.Adicionar(documento);
+
+
+
+
+
+
+
         }
 
+        public Task Encapsular(string filePath)
+        {
 
+            ArrayList array = new ArrayList();
+            var file = new StreamReader(filePath);
+            string? line;
+            while ((line = file.ReadLine()) != null)
+            {
+                int count = 0;
+                foreach (char item in line)
+                {
+                    count++;
+                }
+                if (count == 13)
+                {
+                    string replacement = "";
+                    string pattern = @"^.{2}";
+                    string result = Regex.Replace(line, pattern, replacement);
+                    line = result;
+                }
+
+
+                ContatoDocumento Contato = new ContatoDocumento()
+                {
+                    numero = line,
+                };
+
+                
+                Adicionar(Contato);
+
+
+               
+            }
+
+            file.Close();
+            return Task.CompletedTask;
+
+            
+        }
     }
 }
