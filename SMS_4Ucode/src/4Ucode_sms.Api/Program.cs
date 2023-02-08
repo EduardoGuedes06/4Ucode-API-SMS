@@ -1,7 +1,5 @@
 using _4Ucode_sms.Api.Configuration;
-using _4Ucode_sms.Api.Data;
-using _4Ucode_sms.Data.Context;
-using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 

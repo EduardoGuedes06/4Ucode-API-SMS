@@ -1,4 +1,4 @@
-﻿using Business.Intefaces;
+﻿using Domain.Interfaces;
 using System.Security.Claims;
 
 namespace _4Ucode_sms.Api.Extensions

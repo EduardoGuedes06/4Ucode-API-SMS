@@ -2,8 +2,7 @@
 
 using _4Ucode_sms.Api.Extensions;
 using _4Ucode_sms.ViewModels;
-using Business.Intefaces;
-using Business.Interfaces;
+using Domain.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;

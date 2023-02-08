@@ -1,6 +1,6 @@
 ﻿using _4Ucode_sms.Api.VewModel;
 using AutoMapper;
-using Business.Models;
+using Domain.Models;
 
 namespace _4Ucode_sms.Api.Configuration
 {

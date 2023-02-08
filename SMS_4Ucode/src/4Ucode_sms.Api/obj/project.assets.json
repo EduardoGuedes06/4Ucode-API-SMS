@@ -1321,26 +1321,11 @@
           }
         }
       },
-      "Bussines/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "AutoMapper": "12.0.0",
-          "FluentValidation": "11.2.2",
-          "Microsoft.AspNetCore.Http.Features": "2.2.0"
-        },
-        "compile": {
-          "bin/placeholder/Bussines.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Bussines.dll": {}
-        }
-      },
       "Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Bussines": "1.0.0",
+          "Domain": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.10",
           "Microsoft.EntityFrameworkCore": "6.0.10",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.10",
@@ -1351,6 +1336,38 @@
         },
         "runtime": {
           "bin/placeholder/Data.dll": {}
+        }
+      },
+      "Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AutoMapper": "12.0.0",
+          "FluentValidation": "11.2.2",
+          "Microsoft.AspNetCore.Http.Features": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.dll": {}
+        }
+      },
+      "Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AutoMapper": "12.0.0",
+          "Data": "1.0.0",
+          "Domain": "1.0.0",
+          "FluentValidation": "11.2.2",
+          "Microsoft.AspNetCore.Http.Features": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Service.dll": {}
         }
       }
     }
@@ -3278,22 +3295,26 @@
         "version.txt"
       ]
     },
-    "Bussines/1.0.0": {
-      "type": "project",
-      "path": "../4Ucode_sms.Bussines/Bussines.csproj",
-      "msbuildProject": "../4Ucode_sms.Bussines/Bussines.csproj"
-    },
     "Data/1.0.0": {
       "type": "project",
-      "path": "../4Ucode_sms.Domain/Data.csproj",
-      "msbuildProject": "../4Ucode_sms.Domain/Data.csproj"
+      "path": "../Data/Data.csproj",
+      "msbuildProject": "../Data/Data.csproj"
+    },
+    "Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
+    },
+    "Service/1.0.0": {
+      "type": "project",
+      "path": "../Service/Service.csproj",
+      "msbuildProject": "../Service/Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.0",
-      "Bussines >= 1.0.0",
-      "Data >= 1.0.0",
+      "Domain >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.Core >= 2.2.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.10",
       "Microsoft.AspNetCore.Identity.UI >= 6.0.10",
@@ -3305,6 +3326,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.10",
       "Microsoft.Extensions.DependencyInjection >= 6.0.1",
       "Pomelo.EntityFrameworkCore.MySql >= 6.0.2",
+      "Service >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3",
       "Swashbuckle.AspNetCore.SwaggerGen >= 6.4.0"
     ]
@@ -3341,11 +3363,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Projetos\\C#\\PROJETOS 4UCode\\SMS_4Ucode\\SMS_4Ucode\\src\\4Ucode_sms.Bussines\\Bussines.csproj": {
-              "projectPath": "C:\\Projetos\\C#\\PROJETOS 4UCode\\SMS_4Ucode\\SMS_4Ucode\\src\\4Ucode_sms.Bussines\\Bussines.csproj"
+            "C:\\Projetos\\C#\\PROJETOS 4UCode\\SMS_4Ucode\\SMS_4Ucode\\src\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Projetos\\C#\\PROJETOS 4UCode\\SMS_4Ucode\\SMS_4Ucode\\src\\Domain\\Domain.csproj"
             },
-            "C:\\Projetos\\C#\\PROJETOS 4UCode\\SMS_4Ucode\\SMS_4Ucode\\src\\4Ucode_sms.Domain\\Data.csproj": {
-              "projectPath": "C:\\Projetos\\C#\\PROJETOS 4UCode\\SMS_4Ucode\\SMS_4Ucode\\src\\4Ucode_sms.Domain\\Data.csproj"
+            "C:\\Projetos\\C#\\PROJETOS 4UCode\\SMS_4Ucode\\SMS_4Ucode\\src\\Service\\Service.csproj": {
+              "projectPath": "C:\\Projetos\\C#\\PROJETOS 4UCode\\SMS_4Ucode\\SMS_4Ucode\\src\\Service\\Service.csproj"
             }
           }
         }

@@ -1,10 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
-using Business.Interfaces;
-using Bussines.Interfaces;
-using _4Ucode_sms.Api.VewModel;
-using System.ComponentModel.DataAnnotations;
-using Business.Intefaces;
+using Domain.Interfaces;
 
 namespace _4Ucode_sms.Api.Controllers
 {
@@ -29,28 +25,13 @@ namespace _4Ucode_sms.Api.Controllers
         [HttpPost("Upload")]
         public async Task<IActionResult> Documento(IFormFile arquivo)
         {
-
             var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Save_Backup_" + arquivo.FileName);
-
                 if (arquivo.Length > 0)
                 {
-
-
                     using var stream = new FileStream(filePath, FileMode.Create);
-
-
                     await arquivo.CopyToAsync(stream);
-
-
-                }
-            
-
+                }         
             await _contatoDocumentoService.Encapsular(filePath);
-
-            
-
-            
-
             return CustomResponse();
         }
     }

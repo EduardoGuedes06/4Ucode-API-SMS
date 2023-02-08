@@ -1,6 +1,4 @@
-﻿using _4Ucode_sms.Bussines.Notificacoes;
-using Business.Intefaces;
-using Business.Interfaces;
+﻿using Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 

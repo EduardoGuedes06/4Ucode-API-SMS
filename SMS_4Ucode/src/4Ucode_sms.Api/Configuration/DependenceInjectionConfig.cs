@@ -1,12 +1,9 @@
-﻿
-using _4Ucode_sms.Api.Extensions;
-using _4Ucode_sms.Bussines.Notificacoes;
-using _4Ucode_sms.Bussines.Services;
-using _4Ucode_sms.Data.Context;
-using Business.Intefaces;
-using Business.Interfaces;
-using Bussines.Interfaces;
+﻿using _4Ucode_sms.Api.Extensions;
+using Data.Context;
 using Data.Repository;
+using Domain.Interfaces;
+using Domain.Notificacoes;
+using Service.Services;
 
 namespace _4Ucode_sms.Api.Configuration
 {

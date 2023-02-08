@@ -1,7 +1,6 @@
 ﻿using System.Text;
 using _4Ucode_sms.Api.Data;
 using _4Ucode_sms.Api.Extensions;
-using _4Ucode_sms.Data.Context;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
