@@ -1,6 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using Domain.Interfaces;
+using _4Ucode_sms.Api.VewModel;
+using Data.Repository;
+using _4Ucode_sms.Api.ViewModel.ViewModelTwilio;
+using Twilio.TwiML.Messaging;
+using Twilio.Types;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
+using System.Threading.Tasks;
+using Domain.Models.ModelTwillo;
 
 namespace _4Ucode_sms.Api.Controllers
 {
@@ -9,6 +18,8 @@ namespace _4Ucode_sms.Api.Controllers
     public class FileUploadController : MainController
     {
         private readonly IContatoDocumentoService _contatoDocumentoService;
+        private readonly IContatoDocumentoRepository _contatoDocumentoRepository;
+        private readonly ITwilloService _twilloService;
         private readonly IMapper _mapper;
 
 
@@ -16,10 +27,14 @@ namespace _4Ucode_sms.Api.Controllers
             INotificador notificador,
             IMapper mapper,
             IUser user,
+            ITwilloService twilloService,
+            IContatoDocumentoRepository contatoDocumentoRepository,
             IContatoDocumentoService baseUploadService) : base(notificador,user)
         {
             _contatoDocumentoService = baseUploadService;
             _mapper = mapper;
+            _contatoDocumentoRepository = contatoDocumentoRepository;
+            _twilloService = twilloService;
         }
 
         [HttpPost("Upload")]
@@ -33,6 +48,13 @@ namespace _4Ucode_sms.Api.Controllers
                 }         
             await _contatoDocumentoService.Encapsular(filePath);
             return CustomResponse();
+        }
+
+
+        [HttpGet("get/all")]
+        public async Task<IEnumerable<ContatoDocumentoViewModel>> ObterTodos()
+        {
+            return _mapper.Map<IEnumerable<ContatoDocumentoViewModel>>(await _contatoDocumentoRepository.ObterTodos());
         }
     }
 }

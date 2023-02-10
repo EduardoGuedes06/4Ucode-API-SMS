@@ -9,26 +9,29 @@ namespace Service.Services
     public class ContatoDocumentoService : BaseService, IContatoDocumentoService
     {
         private readonly IMapper _mapper;
-        private readonly IContatoDocumentoRepository _baseUploadRepository;
+        private readonly IContatoDocumentoRepository _contatoloadRepository;
 
-        public ContatoDocumentoService(IContatoDocumentoRepository documento,INotificador notificador, IMapper mapper) : base(notificador)
+        public ContatoDocumentoService(IContatoDocumentoRepository contato,INotificador notificador, IMapper mapper) : base(notificador)
         {
             _mapper = mapper;
-            _baseUploadRepository = documento;  
+            _contatoloadRepository = contato;  
         }
 
-        public Task GetDocuments<UploadDocumentResponse>(Guid operatorId)
-        {
-            throw new NotImplementedException();
-        }
 
         public async Task Adicionar(ContatoDocumento documento)
         {
 
-            await _baseUploadRepository.Adicionar(documento);
+            await _contatoloadRepository.Adicionar(documento);
 
 
 
+
+        }
+
+        public async Task DeleteAllContatos(ContatoDocumento documento)
+        {
+
+            await _contatoloadRepository.ObterTodos();
 
 
 
@@ -75,6 +78,11 @@ namespace Service.Services
             return Task.CompletedTask;
 
             
+        }
+
+        public Task<List<ContatoDocumento>> ObterTodos()
+        {
+            throw new NotImplementedException();
         }
     }
 }

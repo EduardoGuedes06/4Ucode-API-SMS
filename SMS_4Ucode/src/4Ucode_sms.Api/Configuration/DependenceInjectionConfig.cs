@@ -19,6 +19,9 @@ namespace _4Ucode_sms.Api.Configuration
             services.AddScoped<IEnvioDocumentoRepository, EnvioDocumentoRepository>();
             services.AddScoped<IEnvioDocumentoService, EnvioDocumentoService>();
 
+            services.AddScoped<ITwilloService, TwilloService>();
+            services.AddScoped<ITwilloRepository, TwilloRepository>();
+
             services.AddScoped<INotificador, Notificador>();
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();

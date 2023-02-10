@@ -13,26 +13,7 @@ builder.Configuration
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new OpenApiInfo
-    {
-        Title = "4Ucode Treinamento.API",
-        Description = "A simple example ASP.NET Core Web API",
-        TermsOfService = new Uri("https://example.com/terms"),
-        Contact = new OpenApiContact
-        {
-            Name = "Eduardo guedes",
-            Email = "eduardoguedeslibras@gmail.com",
-            Url = new Uri("https://www.zedotech.com"),
-        },
-        License = new OpenApiLicense
-        {
-            Name = "Use under LICX",
-            Url = new Uri("https://example.com/license"),
-        }
-    });
-});
+builder.Services.AddSwaggerGen();
 builder.Services.AddCors();
 
 builder.Services.AddIdentityConfig(builder.Configuration);

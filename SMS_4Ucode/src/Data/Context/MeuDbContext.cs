@@ -1,5 +1,6 @@
 ﻿
 using Domain.Models;
+using Domain.Models.ModelTwillo;
 using Microsoft.EntityFrameworkCore;
 
 namespace Data.Context
@@ -12,9 +13,11 @@ namespace Data.Context
             ChangeTracker.AutoDetectChangesEnabled = false;
         }
 
-        public DbSet<ContatoDocumento> tb_Contatos { get; set; }
+        public DbSet<ContatoDocumento> Contatos { get; set; }
 
-        public DbSet<EnvioDocumento> tb_Envio { get; set; }
+        public DbSet<EnvioDocumento> Envios { get; set; }
+
+        public DbSet<TwilloModel> twilloConfigs { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

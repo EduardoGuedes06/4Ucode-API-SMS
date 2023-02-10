@@ -36,6 +36,7 @@ C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debu
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
@@ -44,6 +45,7 @@ C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debu
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Microsoft.OpenApi.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\MySqlConnector.dll
+C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -55,6 +57,7 @@ C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debu
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\System.Security.Permissions.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Twilio.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
@@ -67,9 +70,11 @@ C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debu
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Bussines.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Data.dll
-C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Bussines.pdb
+C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Domain.dll
+C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Service.dll
+C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Domain.pdb
+C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Service.pdb
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Data.pdb
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\staticwebassets.build.json
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\staticwebassets.development.json

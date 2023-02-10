@@ -228,6 +228,10 @@
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "Twilio": {
+              "target": "Package",
+              "version": "[6.2.2, )"
             }
           },
           "imports": [
