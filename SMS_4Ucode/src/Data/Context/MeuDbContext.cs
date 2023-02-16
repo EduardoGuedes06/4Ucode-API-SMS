@@ -15,9 +15,9 @@ namespace Data.Context
 
         public DbSet<ContatoDocumento> Contatos { get; set; }
 
-        public DbSet<EnvioDocumento> Envios { get; set; }
+        public DbSet<EnvioDocumento> Envios_Log { get; set; }
 
-        public DbSet<TwilloModel> twilloConfigs { get; set; }
+        public DbSet<TwilloModel> twillo_Log { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

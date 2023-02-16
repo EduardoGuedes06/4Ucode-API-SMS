@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\path_txts\texto_sms_Append_02_09_2023_16_15_27.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Save_Backup_numeros.txt" />
   </ItemGroup>
 
@@ -38,6 +42,10 @@
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
     <ProjectReference Include="..\Service\Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\path_txts\" />
   </ItemGroup>
 
 </Project>

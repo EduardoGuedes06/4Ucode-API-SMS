@@ -30,11 +30,11 @@ namespace _4Ucode_sms.Domain.Migrations
 
                     b.Property<string>("numero")
                         .IsRequired()
-                        .HasColumnType("varchar(11)");
+                        .HasColumnType("varchar(13)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("tb_Contatos", (string)null);
+                    b.ToTable("Contatos", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.EnvioDocumento", b =>
@@ -46,8 +46,8 @@ namespace _4Ucode_sms.Domain.Migrations
                     b.Property<DateTime>("DataCadastro")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<bool>("Enviado")
-                        .HasColumnType("tinyint(1)");
+                    b.Property<int>("Enviado")
+                        .HasColumnType("int");
 
                     b.Property<Guid>("NumeroId")
                         .HasColumnType("char(36)");
@@ -60,7 +60,7 @@ namespace _4Ucode_sms.Domain.Migrations
 
                     b.HasIndex("NumeroId");
 
-                    b.ToTable("tb_Envio", (string)null);
+                    b.ToTable("Envios_Log", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.ModelTwillo.TwilloModel", b =>
@@ -101,7 +101,7 @@ namespace _4Ucode_sms.Domain.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("twilloConfigs");
+                    b.ToTable("twillo_Log");
                 });
 
             modelBuilder.Entity("Domain.Models.EnvioDocumento", b =>

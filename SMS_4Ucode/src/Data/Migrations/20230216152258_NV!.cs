@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace _4Ucode_sms.Domain.Migrations
 {
-    public partial class _ini : Migration
+    public partial class NV : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,22 +13,22 @@ namespace _4Ucode_sms.Domain.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "tb_Contatos",
+                name: "Contatos",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
-                    numero = table.Column<string>(type: "varchar(11)", nullable: false)
+                    numero = table.Column<string>(type: "varchar(13)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     DataCadastro = table.Column<DateTime>(type: "datetime(6)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_tb_Contatos", x => x.Id);
+                    table.PrimaryKey("PK_Contatos", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "twilloConfigs",
+                name: "twillo_Log",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
@@ -49,48 +49,48 @@ namespace _4Ucode_sms.Domain.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_twilloConfigs", x => x.Id);
+                    table.PrimaryKey("PK_twillo_Log", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "tb_Envio",
+                name: "Envios_Log",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
                     NumeroId = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
                     TextoEnvio = table.Column<string>(type: "varchar(260)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Enviado = table.Column<bool>(type: "tinyint(1)", nullable: false),
+                    Enviado = table.Column<int>(type: "int", nullable: false),
                     DataCadastro = table.Column<DateTime>(type: "datetime(6)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_tb_Envio", x => x.Id);
+                    table.PrimaryKey("PK_Envios_Log", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_tb_Envio_tb_Contatos_NumeroId",
+                        name: "FK_Envios_Log_Contatos_NumeroId",
                         column: x => x.NumeroId,
-                        principalTable: "tb_Contatos",
+                        principalTable: "Contatos",
                         principalColumn: "Id");
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateIndex(
-                name: "IX_tb_Envio_NumeroId",
-                table: "tb_Envio",
+                name: "IX_Envios_Log_NumeroId",
+                table: "Envios_Log",
                 column: "NumeroId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "tb_Envio");
+                name: "Envios_Log");
 
             migrationBuilder.DropTable(
-                name: "twilloConfigs");
+                name: "twillo_Log");
 
             migrationBuilder.DropTable(
-                name: "tb_Contatos");
+                name: "Contatos");
         }
     }
 }

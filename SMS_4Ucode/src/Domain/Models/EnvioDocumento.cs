@@ -1,5 +1,7 @@
 ﻿
 
+using Domain.Models.Enums;
+
 namespace Domain.Models
 
 {
@@ -9,7 +11,7 @@ namespace Domain.Models
             public Guid NumeroId { get; set; }
             public string TextoEnvio { get; set; }
             public ContatoDocumento Numero { get; set; }
-            public bool Enviado { get; set; }
+            public EnvioEnum Enviado { get; set; }
     }
     
 }

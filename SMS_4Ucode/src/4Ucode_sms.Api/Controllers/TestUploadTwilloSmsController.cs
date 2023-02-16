@@ -15,13 +15,13 @@ namespace _4Ucode_sms.Api.Controllers
 {
     [Route("Twillo")]
     //[ApiController]
-    public class UploadTwilloSmsController : MainController
+    public class TestUploadTwilloSmsController : MainController
     {
         private readonly ITwilloService _twilloService;
         private readonly IMapper _mapper;
 
 
-        public UploadTwilloSmsController(
+        public TestUploadTwilloSmsController(
             INotificador notificador,
             IMapper mapper,
             IUser user,

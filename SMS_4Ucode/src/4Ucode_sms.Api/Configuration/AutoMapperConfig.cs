@@ -10,8 +10,11 @@ namespace _4Ucode_sms.Api.Configuration
     {
         public AutoMapperConfig()
         {
-            CreateMap<ContatoDocumentoViewModel, ContatoDocumento>().ReverseMap();
+            CreateMap<ContatoViewModel, ContatoDocumento>().ReverseMap();
+            CreateMap<ContatoPostModel, ContatoDocumento>().ReverseMap();
+        
             CreateMap<EnvioDocumentoViewModel, EnvioDocumento>().ReverseMap();
+            CreateMap<PostDocumentoViewModel, EnvioDocumento>().ReverseMap();
 
             CreateMap<PostMensageTwilloViewModel, TwilloMensageModel>().ReverseMap();
             CreateMap<PostTwilloViewModel, TwilloModel>().ReverseMap();

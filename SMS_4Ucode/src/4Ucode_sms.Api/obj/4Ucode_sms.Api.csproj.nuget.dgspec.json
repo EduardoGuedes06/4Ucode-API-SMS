@@ -364,6 +364,10 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "NPOI": {
+              "target": "Package",
+              "version": "[2.6.0, )"
+            },
             "Twilio": {
               "target": "Package",
               "version": "[6.2.2, )"

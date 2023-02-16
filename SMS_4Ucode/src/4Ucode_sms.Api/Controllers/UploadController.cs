@@ -2,20 +2,13 @@
 using AutoMapper;
 using Domain.Interfaces;
 using _4Ucode_sms.Api.VewModel;
-using Data.Repository;
-using _4Ucode_sms.Api.ViewModel.ViewModelTwilio;
-using Twilio.TwiML.Messaging;
-using Twilio.Types;
-using Twilio;
-using Twilio.Rest.Api.V2010.Account;
-using System.Threading.Tasks;
-using Domain.Models.ModelTwillo;
+using Domain.Models;
 
 namespace _4Ucode_sms.Api.Controllers
 {
-    [Route("api/Arquivo")]
+    [Route("api/contatos")]
     //[ApiController]
-    public class FileUploadController : MainController
+    public class UploadController : MainController
     {
         private readonly IContatoDocumentoService _contatoDocumentoService;
         private readonly IContatoDocumentoRepository _contatoDocumentoRepository;
@@ -23,7 +16,7 @@ namespace _4Ucode_sms.Api.Controllers
         private readonly IMapper _mapper;
 
 
-        public FileUploadController(
+        public UploadController(
             INotificador notificador,
             IMapper mapper,
             IUser user,
@@ -37,10 +30,10 @@ namespace _4Ucode_sms.Api.Controllers
             _twilloService = twilloService;
         }
 
-        [HttpPost("Upload")]
+        [HttpPost("Upload_file")]
         public async Task<IActionResult> Documento(IFormFile arquivo)
         {
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Save_Backup_" + arquivo.FileName);
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/path_txts/" + arquivo.FileName);
                 if (arquivo.Length > 0)
                 {
                     using var stream = new FileStream(filePath, FileMode.Create);
@@ -51,10 +44,38 @@ namespace _4Ucode_sms.Api.Controllers
         }
 
 
-        [HttpGet("get/all")]
-        public async Task<IEnumerable<ContatoDocumentoViewModel>> ObterTodos()
+        [HttpPost]
+        public async Task<ActionResult<ContatoPostModel>> PostContatos(List<ContatoPostModel> contatoPostModel)
         {
-            return _mapper.Map<IEnumerable<ContatoDocumentoViewModel>>(await _contatoDocumentoRepository.ObterTodos());
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
+            await _contatoDocumentoService.AdicionarContatos(_mapper.Map<List<ContatoDocumento>>(contatoPostModel));
+
+            return CustomResponse(contatoPostModel);
         }
+
+
+        [HttpGet]
+        public async Task<IEnumerable<ContatoViewModel>> ObterTodos()
+        {
+            return _mapper.Map<IEnumerable<ContatoViewModel>>(await _contatoDocumentoRepository.ObterTodos());
+        }
+
+
+        [HttpGet("{id:guid}")]
+        public async Task<ActionResult<ContatoViewModel>> ObterPorId(Guid id)
+        {
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
+
+            
+            var contato = _mapper.Map<ContatoViewModel>(await _contatoDocumentoRepository.ObterPorId(id));
+
+            if (contato == null) return NotFound();
+
+            return contato;
+        }
+
+
+
+
     }
 }

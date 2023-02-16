@@ -2,6 +2,7 @@
 using Domain.Interfaces;
 using Domain.Models;
 using System.Collections;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 namespace Service.Services
@@ -17,13 +18,20 @@ namespace Service.Services
             _contatoloadRepository = contato;  
         }
 
+        public async Task Adicionar(ContatoDocumento contatoDocumento)
+        {
+            await _contatoloadRepository.Adicionar(contatoDocumento);
+        }
 
-        public async Task Adicionar(ContatoDocumento documento)
+        public async Task AdicionarContatos(List<ContatoDocumento> contatos)
         {
 
-            await _contatoloadRepository.Adicionar(documento);
+            
 
-
+            foreach (var contato in contatos)
+            {
+                await _contatoloadRepository.Adicionar(contato);
+            }
 
 
         }
@@ -51,12 +59,16 @@ namespace Service.Services
                 {
                     count++;
                 }
-                if (count == 13)
+                if (count == 11)
                 {
-                    string replacement = "";
-                    string pattern = @"^.{2}";
-                    string result = Regex.Replace(line, pattern, replacement);
-                    line = result;
+                    // Adiciona o 55
+                    line = String.Concat("55", line);
+
+                    // Tira o 55
+                    //string replacement = "";
+                    //string pattern = @"^.{2}";
+                    //string result = Regex.Replace(line, pattern, replacement);
+                    //line = result;
                 }
 
 
@@ -80,9 +92,5 @@ namespace Service.Services
             
         }
 
-        public Task<List<ContatoDocumento>> ObterTodos()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

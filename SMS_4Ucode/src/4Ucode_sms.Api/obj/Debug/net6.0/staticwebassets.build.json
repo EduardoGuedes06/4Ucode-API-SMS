@@ -1,12 +1,20 @@
 {
   "Version": 1,
-  "Hash": "HCdivRflzQQQ2Uqaofj4GX544uCwGefLvMVAyD7JFQg=",
+  "Hash": "p+4c6dmtqb8rViTl03YaL6TTzZJkoIy84SouGRtcUQY=",
   "Source": "4Ucode_sms.Api",
   "BasePath": "_content/4Ucode_sms.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "4Ucode_sms.Api\\wwwroot",
+      "Source": "4Ucode_sms.Api",
+      "ContentRoot": "C:\\Projetos\\C#\\PROJETOS 4UCode\\SMS_4Ucode\\SMS_4Ucode\\src\\4Ucode_sms.Api\\wwwroot\\",
+      "BasePath": "_content/4Ucode_sms.Api",
+      "Pattern": "**"
+    }
+  ],
   "Assets": [
     {
       "Identity": "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\6.0.10\\staticwebassets\\V5\\css\\site.css",

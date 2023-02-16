@@ -15,7 +15,7 @@ namespace Data.Mappings
                 .HasColumnType("varchar(260)");
 
 
-            builder.ToTable("tb_Envio");
+            builder.ToTable("Envios_Log");
         }
     }
 }

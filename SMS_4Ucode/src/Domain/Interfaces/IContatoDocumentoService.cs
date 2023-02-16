@@ -8,7 +8,9 @@ namespace Domain.Interfaces
     {
 
         Task DeleteAllContatos(ContatoDocumento documento);
-        Task Adicionar(ContatoDocumento documento);
+        Task AdicionarContatos(List<ContatoDocumento> contatos);
+
+        Task Adicionar(ContatoDocumento contatoDocumento);
         Task Encapsular(string filePath);
     }
 }
