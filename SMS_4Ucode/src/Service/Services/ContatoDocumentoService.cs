@@ -61,14 +61,7 @@ namespace Service.Services
                 }
                 if (count == 11)
                 {
-                    // Adiciona o 55
                     line = String.Concat("55", line);
-
-                    // Tira o 55
-                    //string replacement = "";
-                    //string pattern = @"^.{2}";
-                    //string result = Regex.Replace(line, pattern, replacement);
-                    //line = result;
                 }
 
 

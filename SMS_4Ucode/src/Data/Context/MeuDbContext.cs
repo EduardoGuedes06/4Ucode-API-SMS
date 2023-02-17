@@ -14,7 +14,8 @@ namespace Data.Context
         }
 
         public DbSet<ContatoDocumento> Contatos { get; set; }
-
+        public DbSet<ConteudoCliente> ConteudoClientes { get; set; }
+        public DbSet<DadosCliente> DadosCliente { get; set; }
         public DbSet<EnvioDocumento> Envios_Log { get; set; }
 
         public DbSet<TwilloModel> twillo_Log { get; set; }
