@@ -14,12 +14,12 @@ namespace Data.Mappings
                .IsRequired()
                .HasColumnType("varchar(13)");
 
-             //1 : N => Envios : Numeros
+             
             builder.HasMany(f => f.EnvioDocumentos)
                 .WithOne(p => p.Numero)
                 .HasForeignKey(p => p.NumeroId);
 
-            builder.ToTable("Contatos");
+            builder.ToTable("tb_contato");
         }
     }
 }

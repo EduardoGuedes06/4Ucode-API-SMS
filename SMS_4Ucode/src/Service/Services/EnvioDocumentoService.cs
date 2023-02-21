@@ -30,11 +30,6 @@ namespace Service.Services
             _contatoDocumentoRepository = contatoDocumentoRepository;
         }
 
-        public Task GetDocuments<UploadDocumentResponse>(Guid operatorId)
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task<bool> AdicionarEnvios(List<EnvioDocumento> documentos)
         {
             try

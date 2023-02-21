@@ -36,16 +36,6 @@ namespace Service.Services
 
         }
 
-        public async Task DeleteAllContatos(ContatoDocumento documento)
-        {
-
-            await _contatoloadRepository.ObterTodos();
-
-
-
-
-        }
-
         public Task Encapsular(string filePath)
         {
 

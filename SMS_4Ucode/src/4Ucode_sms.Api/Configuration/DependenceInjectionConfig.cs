@@ -19,6 +19,11 @@ namespace _4Ucode_sms.Api.Configuration
             services.AddScoped<IEnvioDocumentoRepository, EnvioDocumentoRepository>();
             services.AddScoped<IEnvioDocumentoService, EnvioDocumentoService>();
 
+            services.AddScoped<IDadosClienteRepository, DadosClienteRepository>();
+            services.AddScoped<IDadosClienteService, DadosClienteService>();
+            services.AddScoped<IConteudoClienteRepository, ConteudoClienteRepository>();
+            services.AddScoped<IConteudoClienteService, ConteudoClienteService>();
+
             services.AddScoped<ITwilloService, TwilloService>();
             services.AddScoped<ITwilloRepository, TwilloRepository>();
 
