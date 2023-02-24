@@ -9,5 +9,6 @@ namespace Domain.Interfaces
 {
     public interface IDadosClienteRepository : IRepository<DadosCliente>
     {
+        Task<DadosCliente> ObterConteudoCliente(Guid id);
     }
 }

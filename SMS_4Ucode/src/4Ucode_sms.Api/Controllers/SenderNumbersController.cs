@@ -43,9 +43,9 @@ namespace _4Ucode_sms.Api.Controllers
 
 
         [HttpGet]
-        public async Task<IEnumerable<ContatoViewModel>> ObterTodos()
+        public async Task<IEnumerable<EnvioDocumentoViewModel>> ObterTodos()
         {
-            return _mapper.Map<IEnumerable<ContatoViewModel>>(await _envioDocumentoRepository.ObterTodos());
+            return _mapper.Map<IEnumerable<EnvioDocumentoViewModel>>(await _envioDocumentoRepository.ObterTodos());
         }
     }
 }

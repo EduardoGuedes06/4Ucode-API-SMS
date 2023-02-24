@@ -10,7 +10,6 @@ namespace Domain.Interfaces
     public interface IDadosClienteService
     {
         public Task Adicionar(DadosCliente dadosCliente);
-
-
+        Task Remover(Guid id);
     }
 }

@@ -9,8 +9,7 @@ namespace Domain.Interfaces
 {
     public interface IConteudoClienteService
     {
-
-
-
+        public Task Adicionar(ConteudoCliente conteudoCliente);
+        Task Remover(Guid id);
     }
 }

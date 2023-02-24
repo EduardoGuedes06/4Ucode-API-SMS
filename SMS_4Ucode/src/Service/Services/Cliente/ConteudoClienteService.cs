@@ -25,6 +25,13 @@ namespace Service.Services
         public async Task Adicionar(ConteudoCliente conteudoCliente)
         {
             await _conteudoClienteRepository.Adicionar(conteudoCliente);
+
+
+        }
+
+        public Task Remover(Guid id)
+        {
+            return _conteudoClienteRepository.Remover(id);
         }
     }
 }

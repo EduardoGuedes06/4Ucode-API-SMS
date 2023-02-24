@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Domain.Interfaces;
 using Domain.Models;
+using NPOI.SS.Formula.Functions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
@@ -30,6 +31,15 @@ namespace Service.Services
 
             foreach (var contato in contatos)
             {
+                var count = 0;
+                foreach (char item in contato.numero)
+                {
+                    count++;
+                }
+                if (count == 11)
+                {
+                    contato.numero = String.Concat("55", contato.numero);
+                }
                 await _contatoloadRepository.Adicionar(contato);
             }
 

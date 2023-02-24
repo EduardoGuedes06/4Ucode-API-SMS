@@ -54,30 +54,64 @@ namespace _4Ucode_sms.Api.Controllers
 
 
         [HttpGet("conteudo")]
-        public async Task<IEnumerable<ConteudoClienteViewModel>> ObterCliente()
+        public async Task<IEnumerable<ConteudoClienteViewModel>> ObterConteudo()
         {
             return _mapper.Map<IEnumerable<ConteudoClienteViewModel>>(await _conteudoClienteRepository.ObterTodos());
         }
-
-
-        [HttpGet("dados")]
-        public async Task<IEnumerable<DadosClienteViewModel>> ObterDadosCliente()
+        [HttpPost("conteudo")]
+        public async Task<ActionResult<PostDadosClienteViewModel>> AdicionarConteudo(ConteudoClienteViewModel conteudoClienteViewModel)
         {
-            return _mapper.Map<IEnumerable<DadosClienteViewModel>>(await _dadosClienteRepository.ObterTodos());
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
+            await _conteudoClienteService.Adicionar(_mapper.Map<ConteudoCliente>(conteudoClienteViewModel));
+
+            return CustomResponse(conteudoClienteViewModel);
+        }
+
+        [HttpGet("conteudo{id:guid}")]
+        public async Task<ConteudoClienteViewModel> ObterConteudo(Guid id)
+        {
+            return _mapper.Map<ConteudoClienteViewModel>(await _conteudoClienteRepository.ObterPorId(id));
+        }
+
+        [HttpDelete("conteudo{id:guid}")]
+        public async Task<ActionResult<ConteudoClienteViewModel>> ExcluirConteudo(Guid id)
+        {
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
+            await _conteudoClienteService.Remover(id);
+            return CustomResponse(id);
         }
 
 
-        [HttpPost("dados")]
-        public async Task<ActionResult<PostDadosClienteViewModel>> Adicionar(PostDadosClienteViewModel dadosClienteViewModel)
+
+
+
+        [HttpGet("cliente")]
+        public async Task<IEnumerable<DadosClienteViewModel>> ObterDados()
+        {
+            return _mapper.Map<IEnumerable<DadosClienteViewModel>>(await _dadosClienteRepository.ObterTodos());
+        }
+        [HttpPost("cliente")]
+        public async Task<ActionResult<PostDadosClienteViewModel>> AdicionarCliente(PostDadosClienteViewModel dadosClienteViewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
-            await _dadosClienteRepository.Adicionar(_mapper.Map<DadosCliente>(dadosClienteViewModel));
+            await _dadosClienteService.Adicionar(_mapper.Map<DadosCliente>(dadosClienteViewModel));
 
             return CustomResponse(dadosClienteViewModel);
         }
 
+        [HttpGet("cliente{id:guid}")]
+        public async Task<DadosClienteViewModel> ObterDados(Guid id)
+        {
+            return _mapper.Map<DadosClienteViewModel>(await _dadosClienteRepository.ObterPorId(id));
+        }
 
-
+        [HttpDelete("cliente{id:guid}")]
+        public async Task<ActionResult<DadosClienteViewModel>> ExcluirDados(Guid id)
+        {
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
+            await _dadosClienteService.Remover(id);
+            return CustomResponse(id);
+        }
 
 
 

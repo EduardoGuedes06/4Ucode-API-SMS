@@ -64,6 +64,10 @@ namespace Service.Services
         {
             var count = 0;
 
+            string testeCliente = "e1b5aa55-525c-4c77-b9e6-66936b7c5584";
+
+            documento.IdCliente = Guid.Parse(testeCliente) ;
+
             documento.Enviado = EnvioEnum.Failure;
 
             var contatoDocumento = await _contatoDocumentoRepository.ObterPorId(documento.NumeroId);

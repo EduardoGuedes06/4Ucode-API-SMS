@@ -24,7 +24,27 @@ namespace Service.Services
 
         public async Task Adicionar(DadosCliente dadosCliente)
         {
+            if (_dadosClienterepository.Buscar(f => f.NomeCliente == dadosCliente.NomeCliente).Result.Any())
+            {
+                Notificar("Já existe um cliente com este nome infomado.");
+                return;
+            }
+
+
             await _dadosClienterepository.Adicionar(dadosCliente);
+
+
+        }
+
+        public async Task Remover(Guid id)
+        {
+
+            if (_dadosClienterepository.ObterConteudoCliente(id).Result.ConteudoCliente.Any())
+            {
+                Notificar("O Cliente possui cadastrados nos sistema!");
+                return;
+            }
+            await _dadosClienterepository.Remover(id);
         }
     }
 }
