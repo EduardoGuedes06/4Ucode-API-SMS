@@ -14,7 +14,7 @@ using Domain.Models.ModelTwillo;
 namespace _4Ucode_sms.Api.Controllers
 {
     [Route("Twillo")]
-    //[ApiController]
+    [ApiController]
     public class TestUploadTwilloSmsController : MainController
     {
         private readonly ITwilloService _twilloService;

@@ -8,7 +8,7 @@ using Data.Repository;
 namespace _4Ucode_sms.Api.Controllers
 {
     [Route("api/envio")]
-    //[ApiController]
+    [ApiController]
     public class SenderNumbersController : MainController
     {
         private readonly IEnvioDocumentoService _envioDocumentoService;

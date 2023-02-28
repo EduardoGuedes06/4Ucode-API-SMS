@@ -1,10 +1,5 @@
 ﻿using Domain.Models.Enums;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Models
 {
@@ -39,4 +34,11 @@ namespace Domain.Models
         public string NomeCliente { get; set; }
     }
 
+    public class ConteudoPaginacaoViewModel
+    {
+        public int Pagina { get; set; }
+        public int TamanhoPagina { get; set; }
+        public int ItensPorPagina { get; set; }
+        public TextoClienteEnum ativo { get; set; }
+    }
 }

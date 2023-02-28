@@ -90,14 +90,14 @@ namespace _4Ucode_sms.Domain.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)");
 
+                    b.Property<Guid>("ClienteId")
+                        .HasColumnType("char(36)");
+
                     b.Property<DateTime>("DataCadastro")
                         .HasColumnType("datetime(6)");
 
                     b.Property<int>("Enviado")
                         .HasColumnType("int");
-
-                    b.Property<Guid>("IdCliente")
-                        .HasColumnType("char(36)");
 
                     b.Property<Guid>("NumeroId")
                         .HasColumnType("char(36)");
@@ -108,7 +108,7 @@ namespace _4Ucode_sms.Domain.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdCliente");
+                    b.HasIndex("ClienteId");
 
                     b.HasIndex("NumeroId");
 
@@ -170,7 +170,7 @@ namespace _4Ucode_sms.Domain.Migrations
                 {
                     b.HasOne("Domain.Models.DadosCliente", "Cliente")
                         .WithMany("EnvioDocumentos")
-                        .HasForeignKey("IdCliente")
+                        .HasForeignKey("ClienteId")
                         .IsRequired();
 
                     b.HasOne("Domain.Models.ContatoDocumento", "Numero")

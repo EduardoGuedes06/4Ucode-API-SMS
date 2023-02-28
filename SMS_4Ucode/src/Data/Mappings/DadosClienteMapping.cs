@@ -22,7 +22,7 @@ namespace Data.Mappings
                 //1 : N => Cliente : Envio
             builder.HasMany(f => f.EnvioDocumentos)
                 .WithOne(p => p.Cliente)
-                .HasForeignKey(p => p.IdCliente);
+                .HasForeignKey(p => p.ClienteId);
 
             builder.ToTable("tb_cliente");
         }

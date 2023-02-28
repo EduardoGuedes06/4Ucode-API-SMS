@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace _4Ucode_sms.Api.Controllers
 {
     [Route("Cliente")]
+    [ApiController]
     public class ClienteController : MainController
     {
 
@@ -53,38 +54,6 @@ namespace _4Ucode_sms.Api.Controllers
         }
 
 
-        [HttpGet("conteudo")]
-        public async Task<IEnumerable<ConteudoClienteViewModel>> ObterConteudo()
-        {
-            return _mapper.Map<IEnumerable<ConteudoClienteViewModel>>(await _conteudoClienteRepository.ObterTodos());
-        }
-        [HttpPost("conteudo")]
-        public async Task<ActionResult<PostDadosClienteViewModel>> AdicionarConteudo(ConteudoClienteViewModel conteudoClienteViewModel)
-        {
-            if (!ModelState.IsValid) return CustomResponse(ModelState);
-            await _conteudoClienteService.Adicionar(_mapper.Map<ConteudoCliente>(conteudoClienteViewModel));
-
-            return CustomResponse(conteudoClienteViewModel);
-        }
-
-        [HttpGet("conteudo{id:guid}")]
-        public async Task<ConteudoClienteViewModel> ObterConteudo(Guid id)
-        {
-            return _mapper.Map<ConteudoClienteViewModel>(await _conteudoClienteRepository.ObterPorId(id));
-        }
-
-        [HttpDelete("conteudo{id:guid}")]
-        public async Task<ActionResult<ConteudoClienteViewModel>> ExcluirConteudo(Guid id)
-        {
-            if (!ModelState.IsValid) return CustomResponse(ModelState);
-            await _conteudoClienteService.Remover(id);
-            return CustomResponse(id);
-        }
-
-
-
-
-
         [HttpGet("cliente")]
         public async Task<IEnumerable<DadosClienteViewModel>> ObterDados()
         {
@@ -112,15 +81,6 @@ namespace _4Ucode_sms.Api.Controllers
             await _dadosClienteService.Remover(id);
             return CustomResponse(id);
         }
-
-
-
-
-
-
-
-
-
 
 
 

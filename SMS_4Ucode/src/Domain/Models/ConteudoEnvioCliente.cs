@@ -1,4 +1,5 @@
 ﻿using Domain.Models.Enums;
+using System.Text.Json.Serialization;
 
 namespace Domain.Models
 {
@@ -20,5 +21,12 @@ namespace Domain.Models
         public IEnumerable<ConteudoCliente> ConteudoCliente { get; set; }
 
         public IEnumerable<EnvioDocumento> EnvioDocumentos { get; set; }
+    }
+    public class ConteudoPaginacao
+    {
+        public int Pagina { get; set; }
+        public int TamanhoPagina { get; set; }
+        public int ItensPorPagina { get; set; }
+        public TextoClienteEnum ativo { get; set; }
     }
 }

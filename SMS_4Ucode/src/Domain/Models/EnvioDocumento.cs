@@ -9,7 +9,7 @@ namespace Domain.Models
         {
 
             public Guid NumeroId { get; set; }
-            public Guid IdCliente { get; set; }
+            public Guid ClienteId { get; set; }
             public string TextoEnvio { get; set; }
             public EnvioEnum Enviado { get; set; }
             public ContatoDocumento Numero { get; set; }
