@@ -10,11 +10,7 @@ builder.Configuration
     .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", true, true)
     .AddEnvironmentVariables();
 
-builder.Services.AddControllers();
-
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.AddCors();
+// ConfigureServices
 
 builder.Services.AddIdentityConfig(builder.Configuration);
 
@@ -23,10 +19,8 @@ builder.Services.AddDbContext<MeuDbContext>(options =>
     options.UseMySql("server=localhost;initial catalog = smsdb;uid=root;pwd=Root",
     Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.0-mysql")).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 });
-
-builder.Services.ResolveDependencies();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
+builder.Services.AddApiConfig();
 
 var app = builder.Build();
 
@@ -36,16 +30,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseApiConfig(app.Environment);
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-
-app.UseCors(x => x
-    .AllowAnyMethod()
-    .AllowAnyHeader()
-    .SetIsOriginAllowed(origin => true) // allow any origin
-    .AllowCredentials());
-
-app.MapControllers();
 
 app.Run();
