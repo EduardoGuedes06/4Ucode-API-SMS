@@ -7,7 +7,7 @@ using Domain.Models;
 namespace _4Ucode_sms.Api.Controllers
 {
     [Route("api/contatos")]
-    //[ApiController]
+    [ApiController]
     public class UploadController : MainController
     {
         private readonly IContatoDocumentoService _contatoDocumentoService;

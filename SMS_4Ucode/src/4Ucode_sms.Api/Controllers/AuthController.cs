@@ -14,6 +14,7 @@ using System.Text;
 namespace _4Ucode_sms.Api.Controllers
 {
     [Route("api/Autenticacao")]
+    [ApiController]
     public class AuthController : MainController
     {
         private readonly SignInManager<IdentityUser> _signInManager;

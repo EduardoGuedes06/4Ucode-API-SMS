@@ -20,6 +20,8 @@ namespace _4Ucode_sms.Api.Configuration
             CreateMap<DadosClienteViewModel, DadosCliente>().ReverseMap();
             CreateMap<PostDadosClienteViewModel, DadosCliente>().ReverseMap();
 
+            CreateMap<ConteudoPaginacaoViewModel, ConteudoPaginacao>().ReverseMap();
+
             CreateMap<PostMensageTwilloViewModel, TwilloMensageModel>().ReverseMap();
             CreateMap<PostTwilloViewModel, TwilloModel>().ReverseMap();
 

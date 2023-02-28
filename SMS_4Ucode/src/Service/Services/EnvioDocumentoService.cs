@@ -64,9 +64,9 @@ namespace Service.Services
         {
             var count = 0;
 
-            string testeCliente = "e1b5aa55-525c-4c77-b9e6-66936b7c5584";
+            //string testeCliente = "e1b5aa55-525c-4c77-b9e6-66936b7c5584";
 
-            documento.IdCliente = Guid.Parse(testeCliente) ;
+            //documento.IdCliente = Guid.Parse(testeCliente) ;
 
             documento.Enviado = EnvioEnum.Failure;
 
@@ -90,14 +90,10 @@ namespace Service.Services
                 contatoDocumento.numero = String.Concat("+", contatoDocumento.numero);
             }
 
-            var novoEnvio = new TwilloModel
+            var novoEnvio = new TwilloMensageModel
             {
                 Mensagem = documento.TextoEnvio,
-                ToPhoneNumber = contatoDocumento.numero.ToString(),
-                AccountSid = "AC97d8820f4fbfb3884c78587da93e6937",
-                AuthToken = "1667b5c4233391edeabc0f2e2e98c08f",
-                FromPhoneNumber = "+16193299142",
-                ServiceSid = "MGc5b6e7504c14e704058827f77e8d3a4a",
+                ToPhoneNumber = contatoDocumento.numero.ToString()
 
             };
 
