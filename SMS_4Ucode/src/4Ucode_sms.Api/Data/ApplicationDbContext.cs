@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Domain.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace _4Ucode_sms.Api.Data
@@ -12,5 +13,7 @@ namespace _4Ucode_sms.Api.Data
             options.UseMySql("server=localhost;initial catalog = smsdb;uid=root;pwd=Root",
             Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.0-mysql")).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
         }
+        public DbSet<DadosCliente> DadosClientes { get; set; }
+
     }
 }

@@ -23,6 +23,7 @@ namespace Data.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
             foreach (var property in modelBuilder.Model.GetEntityTypes()
                 .SelectMany(e => e.GetProperties()
                     .Where(p => p.ClrType == typeof(string))))
@@ -52,5 +53,8 @@ namespace Data.Context
 
             return base.SaveChangesAsync(cancellationToken);
         }
+
+
+
     }
 }

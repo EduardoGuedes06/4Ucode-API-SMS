@@ -1,5 +1,7 @@
 using _4Ucode_sms.Api.Configuration;
 using Data.Context;
+using Domain.Interfaces;
+using Domain.Notificacoes;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -11,9 +13,8 @@ builder.Configuration
     .AddEnvironmentVariables();
 
 // ConfigureServices
-
+builder.Services.ResolveDependencies();
 builder.Services.AddIdentityConfig(builder.Configuration);
-
 builder.Services.AddDbContext<MeuDbContext>(options =>
 {
     options.UseMySql("server=localhost;initial catalog = smsdb;uid=root;pwd=Root",
@@ -31,7 +32,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseApiConfig(app.Environment);
-
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
