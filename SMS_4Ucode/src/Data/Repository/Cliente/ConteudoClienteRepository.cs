@@ -29,5 +29,12 @@ namespace _4Ucode_sms.Domain.Repository.Cliente
                 .Where(c => c.DadosCliente.Id == clienteId)
                 .ToListAsync();
         }
+
+        public async Task<List<ConteudoCliente>> ObterConteudoPorCliente(Guid clienteId)
+        {
+            return await Db.ConteudoClientes.AsNoTracking()
+                .Where(c => c.DadosCliente.Id == clienteId)
+                .ToListAsync();
+        }
     }
 }

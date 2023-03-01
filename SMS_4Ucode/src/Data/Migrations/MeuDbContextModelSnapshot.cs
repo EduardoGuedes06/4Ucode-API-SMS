@@ -79,6 +79,9 @@ namespace _4Ucode_sms.Domain.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(75)");
 
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("char(36)");
+
                     b.HasKey("Id");
 
                     b.ToTable("tb_cliente", (string)null);

@@ -63,9 +63,9 @@ namespace _4Ucode_sms.Api.Controllers
 
         [HttpGet("cliente{id:guid}")]
 
-        public async Task<ConteudoClienteViewModel> ObterConteudo(Guid id)
+        public async Task<List<ConteudoClienteViewModel>> ObterConteudo(Guid id)
         {
-            return _mapper.Map<ConteudoClienteViewModel>(await _conteudoClienteRepository.ObterPorId(id));
+            return _mapper.Map<List<ConteudoClienteViewModel>>(await _conteudoClienteRepository.ObterConteudoPorCliente(id));
         }
 
         [HttpPost("conteudo")]

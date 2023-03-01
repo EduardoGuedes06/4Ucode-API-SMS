@@ -1,6 +1,7 @@
 ﻿
 using Domain.Models;
 using Domain.Models.ModelTwillo;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Data.Context
@@ -17,7 +18,6 @@ namespace Data.Context
         public DbSet<ConteudoCliente> ConteudoClientes { get; set; }
         public DbSet<DadosCliente> DadosCliente { get; set; }
         public DbSet<EnvioDocumento> Envios_Log { get; set; }
-
         public DbSet<TwilloModel> twillo_Log { get; set; }
 
 
@@ -34,6 +34,9 @@ namespace Data.Context
             foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys())) relationship.DeleteBehavior = DeleteBehavior.ClientSetNull;
 
             base.OnModelCreating(modelBuilder);
+
+
+
         }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())

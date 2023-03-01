@@ -11,7 +11,7 @@ namespace Domain.Interfaces
     public interface IConteudoClienteRepository : IRepository<ConteudoCliente>
     {
         Task<List<ConteudoCliente>> ObterClientePorId(Guid clienteId);
-
+        Task<List<ConteudoCliente>> ObterConteudoPorCliente(Guid clienteId);
         Task <IEnumerable<ConteudoCliente>> BuscarComFiltroEPaginacao(Guid Cliente,int Pagina, int Tamanhopagina,int itensPorPagina, TextoClienteEnum ativo);
     }
 }

@@ -1,4 +1,6 @@
 ﻿
+using Microsoft.AspNet.Identity.EntityFramework;
+
 namespace Domain.Models
 {
     public abstract class Entity
@@ -13,4 +15,5 @@ namespace Domain.Models
         public Guid Id { get; set; }
         public DateTime DataCadastro { get; set; }
     }
+
 }

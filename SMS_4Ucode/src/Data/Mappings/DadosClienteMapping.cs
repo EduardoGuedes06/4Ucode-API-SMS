@@ -24,6 +24,12 @@ namespace Data.Mappings
                 .WithOne(p => p.Cliente)
                 .HasForeignKey(p => p.ClienteId);
 
+            //1 : 1 => Cliente: Usuario
+            //builder.HasOne(m => m.ApplicationUser)
+            //        .WithMany()
+            //        .HasForeignKey(m => m.UserId);
+
+
             builder.ToTable("tb_cliente");
         }
     }

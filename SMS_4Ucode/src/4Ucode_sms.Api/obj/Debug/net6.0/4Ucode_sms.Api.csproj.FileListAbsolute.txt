@@ -99,6 +99,12 @@ C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debu
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.genruntimeconfig.cache
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\ref\4Ucode_sms.Api.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.csproj.AssemblyReference.cache
+C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.AssemblyInfoInputs.cache
+C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.AssemblyInfo.cs
+C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.csproj.CoreCompileInputs.cache
+C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\appsettings.Development.json
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\appsettings.json
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\4Ucode_sms.Api.staticwebassets.runtime.json
@@ -109,10 +115,14 @@ C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_s
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\4Ucode_sms.Api.pdb
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\AutoMapper.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\EntityFramework.SqlServer.dll
+C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\EntityFramework.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Enums.NET.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\FluentValidation.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Humanizer.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\MathNet.Numerics.dll
+C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Microsoft.AspNet.Identity.Core.dll
+C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
@@ -158,6 +168,7 @@ C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_s
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\System.Drawing.Common.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\System.Linq.Dynamic.Core.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\System.Runtime.Caching.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
@@ -184,13 +195,6 @@ C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_s
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Domain.pdb
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Service.pdb
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Data.pdb
-C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.csproj.AssemblyReference.cache
-C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.GeneratedMSBuildEditorConfig.editorconfig
-C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.AssemblyInfoInputs.cache
-C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.AssemblyInfo.cs
-C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.csproj.CoreCompileInputs.cache
-C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.MvcApplicationPartsAssemblyInfo.cs
-C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\staticwebassets.build.json
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\staticwebassets.development.json
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\scopedcss\bundle\4Ucode_sms.Api.styles.css
@@ -200,3 +204,4 @@ C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_s
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.pdb
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.genruntimeconfig.cache
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\ref\4Ucode_sms.Api.dll
+C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\obj\Debug\net6.0\4Ucode_sms.Api.MvcApplicationPartsAssemblyInfo.cs
