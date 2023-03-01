@@ -1,6 +1,4 @@
 ﻿
-using Microsoft.AspNet.Identity.EntityFramework;
-
 namespace Domain.Models
 {
     public abstract class Entity

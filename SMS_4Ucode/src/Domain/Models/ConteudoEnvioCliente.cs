@@ -1,12 +1,11 @@
 ﻿using Domain.Models.Enums;
-using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Domain.Models
 {
     public class ConteudoCliente : Entity
     {
         public string Texto { get; set; }
-        public Guid IdCliente { get; set; }
+        public Guid ClienteId { get; set; }
         public TextoClienteEnum Ativo { get; set; }
         public DadosCliente DadosCliente { get; set; }
     }
@@ -20,6 +19,7 @@ namespace Domain.Models
 
         public IEnumerable<EnvioDocumento> EnvioDocumentos { get; set; }
 
+        public IEnumerable<ContatoDocumento> ContatoDocumento { get; set; }
 
     }
 

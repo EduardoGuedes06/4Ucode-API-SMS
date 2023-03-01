@@ -30,16 +30,18 @@ namespace _4Ucode_sms.Api.Controllers
             _twilloService = twilloService;
         }
 
-        [HttpPost("Upload_file")]
-        public async Task<IActionResult> Documento(IFormFile arquivo)
+        [HttpPost("Upload_file/cliente{id:guid}")]
+        public async Task<IActionResult> Documento(IFormFile arquivo, Guid cliente)
         {
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/path_txts/" + arquivo.FileName);
+            var clienteString = cliente.ToString();
+
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/path_txts/" +clienteString+" : "+ arquivo.FileName);
                 if (arquivo.Length > 0)
                 {
                     using var stream = new FileStream(filePath, FileMode.Create);
                     await arquivo.CopyToAsync(stream);
                 }         
-            await _contatoDocumentoService.Encapsular(filePath);
+            await _contatoDocumentoService.Encapsular(filePath,cliente);
             return CustomResponse();
         }
 

@@ -7,7 +7,7 @@ namespace _4Ucode_sms.Api.VewModel
         public class ContatoViewModel
         {
             public Guid Id { get; set; }
-
+            public Guid ClienteId { get; set; }
             public string numero { get; set; }
 
             public DateTime DataCadastro { get; set; }
@@ -18,6 +18,9 @@ namespace _4Ucode_sms.Api.VewModel
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         [StringLength(13, ErrorMessage = "O campo {0} precisa ter entre {2} e {1} caracteres", MinimumLength = 11)]
         public string numero { get; set; }
+
+        [Required(ErrorMessage = "O campo {0} é obrigatório")]
+        public Guid ClienteId { get; set; }
 
 
         }

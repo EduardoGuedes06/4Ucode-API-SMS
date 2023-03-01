@@ -115,14 +115,10 @@ C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_s
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\4Ucode_sms.Api.pdb
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\AutoMapper.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\EntityFramework.SqlServer.dll
-C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\EntityFramework.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Enums.NET.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\FluentValidation.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Humanizer.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\MathNet.Numerics.dll
-C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Microsoft.AspNet.Identity.Core.dll
-C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Projetos\C#\PROJETOS 4UCode\SMS_4Ucode\4Ucode-API-SMS\SMS_4Ucode\src\4Ucode_sms.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll

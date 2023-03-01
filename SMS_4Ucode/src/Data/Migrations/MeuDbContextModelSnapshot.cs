@@ -25,6 +25,9 @@ namespace _4Ucode_sms.Domain.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)");
 
+                    b.Property<Guid>("ClienteId")
+                        .HasColumnType("char(36)");
+
                     b.Property<DateTime>("DataCadastro")
                         .HasColumnType("datetime(6)");
 
@@ -33,6 +36,8 @@ namespace _4Ucode_sms.Domain.Migrations
                         .HasColumnType("varchar(13)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ClienteId");
 
                     b.ToTable("tb_contato", (string)null);
                 });
@@ -46,11 +51,11 @@ namespace _4Ucode_sms.Domain.Migrations
                     b.Property<int>("Ativo")
                         .HasColumnType("int");
 
+                    b.Property<Guid>("ClienteId")
+                        .HasColumnType("char(36)");
+
                     b.Property<DateTime>("DataCadastro")
                         .HasColumnType("datetime(6)");
-
-                    b.Property<Guid>("IdCliente")
-                        .HasColumnType("char(36)");
 
                     b.Property<string>("Texto")
                         .IsRequired()
@@ -58,7 +63,7 @@ namespace _4Ucode_sms.Domain.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdCliente");
+                    b.HasIndex("ClienteId");
 
                     b.ToTable("tb_conteudo_cliente", (string)null);
                 });
@@ -159,11 +164,21 @@ namespace _4Ucode_sms.Domain.Migrations
                     b.ToTable("twillo_Log");
                 });
 
+            modelBuilder.Entity("Domain.Models.ContatoDocumento", b =>
+                {
+                    b.HasOne("Domain.Models.DadosCliente", "DadosCliente")
+                        .WithMany("ContatoDocumento")
+                        .HasForeignKey("ClienteId")
+                        .IsRequired();
+
+                    b.Navigation("DadosCliente");
+                });
+
             modelBuilder.Entity("Domain.Models.ConteudoCliente", b =>
                 {
                     b.HasOne("Domain.Models.DadosCliente", "DadosCliente")
                         .WithMany("ConteudoCliente")
-                        .HasForeignKey("IdCliente")
+                        .HasForeignKey("ClienteId")
                         .IsRequired();
 
                     b.Navigation("DadosCliente");
@@ -193,6 +208,8 @@ namespace _4Ucode_sms.Domain.Migrations
 
             modelBuilder.Entity("Domain.Models.DadosCliente", b =>
                 {
+                    b.Navigation("ContatoDocumento");
+
                     b.Navigation("ConteudoCliente");
 
                     b.Navigation("EnvioDocumentos");
